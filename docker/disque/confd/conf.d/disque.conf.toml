@@ -1,0 +1,5 @@
+[template]
+src = "disque.conf.tmpl"
+dest = "/usr/local/etc/disque/disque.conf"
+keys = [
+]

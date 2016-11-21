@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  disque:
+    build:
+      context: .
+      dockerfile: ./docker/disque/Dockerfile
+    env_file: ./docker/disque/.env

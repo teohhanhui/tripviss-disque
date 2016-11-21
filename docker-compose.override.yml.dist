@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  disque:
+    image: quay.io/tripviss/tripviss-disque:disque
+    volumes:
+      - ./docker/disque/data:/data
