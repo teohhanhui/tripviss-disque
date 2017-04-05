@@ -14,6 +14,10 @@ COPY docker/disque/confd /usr/local/etc/confd/
 
 RUN mkdir -p /usr/local/etc/disque
 
-COPY docker/disque/start.sh /
+COPY docker/disque/docker-healthcheck /usr/local/bin/
 
-CMD ["/start.sh"]
+HEALTHCHECK CMD ["docker-healthcheck"]
+
+COPY docker/disque/docker-start /usr/local/bin/
+
+CMD ["docker-start"]

@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  disque:
+    image: quay.io/tripviss/tripviss-disque:disque
+    sysctls:
+      - net.core.somaxconn=1024
+    volumes:
+      - ./docker/disque/confd:/usr/local/etc/confd
+      - ./docker/disque/data:/data
