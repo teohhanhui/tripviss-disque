@@ -37,9 +37,13 @@ trim_trailing_whitespace = false
 [.gitmodules]
 indent_style = tab
 
-[docker-compose.{yml,override.yml,override.yml.dist}]
+[docker-compose.{yml,override.yml,override.yml.dist,override.*.yml.dist}]
 indent_style = space
 indent_size = 2
+
+[docker-{entrypoint,healthcheck,start}]
+indent_style = tab
+indent_size = 4
 
 [Dockerfile]
 indent_style = tab
