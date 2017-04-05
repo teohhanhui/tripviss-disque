@@ -15,9 +15,11 @@ COPY docker/disque/confd /usr/local/etc/confd/
 RUN mkdir -p /usr/local/etc/disque
 
 COPY docker/disque/docker-healthcheck /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-healthcheck
 
 HEALTHCHECK CMD ["docker-healthcheck"]
 
 COPY docker/disque/docker-start /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-start
 
 CMD ["docker-start"]
