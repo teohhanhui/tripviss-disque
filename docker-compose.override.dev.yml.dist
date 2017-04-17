@@ -2,9 +2,24 @@ version: '3'
 
 services:
   disque:
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        window: 10s
+    env_file: ./docker/disque/.env
+    healthcheck:
+      interval: 30s
+      retries: 3
+      timeout: 30s
     image: quay.io/tripviss/tripviss-disque:disque
+    networks:
+      - default
     sysctls:
       - net.core.somaxconn=1024
     volumes:
       - ./docker/disque/confd:/usr/local/etc/confd
       - ./docker/disque/data:/data
+
+networks:
+  default: {}
