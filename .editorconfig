@@ -16,6 +16,8 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 [*.md]
+indent_style = space
+indent_size = 4
 trim_trailing_whitespace = false
 
 [*.sh]
@@ -24,6 +26,7 @@ indent_size = 4
 
 [*.sublime-project]
 indent_style = tab
+indent_size = 4
 
 [*.toml]
 indent_style = space
@@ -36,6 +39,7 @@ trim_trailing_whitespace = false
 
 [.gitmodules]
 indent_style = tab
+indent_size = 4
 
 [docker-compose.{yml,override.yml,override.yml.dist,override.*.yml.dist}]
 indent_style = space
@@ -44,6 +48,10 @@ indent_size = 2
 [docker-{entrypoint,healthcheck,start}]
 indent_style = tab
 indent_size = 4
+
+[docker-stack.{yml,*.yml}]
+indent_style = space
+indent_size = 2
 
 [Dockerfile]
 indent_style = tab

@@ -4,10 +4,12 @@ services:
   disque:
     deploy:
       restart_policy:
-        condition: always
+        condition: any
         delay: 5s
         window: 10s
     env_file: ./docker/disque/.env
+    environment:
+      - TERM
     healthcheck:
       interval: 30s
       retries: 3
