@@ -1,13 +1,15 @@
 *.DS_Store
 *.env.dist
+*.log
+*.md
 *.sublime-project
 *.sublime-workspace
 ._*
 .dockerignore
 .editorconfig
 .env
-.env.dist
 .git/
+.gitattributes
 .gitignore
 .gitmodules
 docker-compose.override.*.yml.dist
