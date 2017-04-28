@@ -3,5 +3,5 @@ version: '3'
 services:
   disque:
     build:
-      context: .
-      dockerfile: ./docker/disque/Dockerfile
+      context: ./docker/disque
+      dockerfile: ./Dockerfile
