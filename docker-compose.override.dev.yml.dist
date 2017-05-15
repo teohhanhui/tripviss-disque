@@ -20,8 +20,8 @@ services:
     sysctls:
       - net.core.somaxconn=1024
     volumes:
-      - ./docker/disque/confd:/usr/local/etc/confd
-      - ./docker/disque/data:/data
+      - ./docker/disque/confd:/usr/local/etc/confd:ro
+      - ./docker/disque/data:/data:rw
 
 networks:
   default: {}
